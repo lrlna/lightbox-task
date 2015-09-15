@@ -6,17 +6,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 var getPhotos = function (){
-  var query = document.querySelector("[type='search'").innerHTML;
-  console.log(query);
-  console.log(token);
+  var query = document.querySelector("[type='search'").value;
+  console.log("query", query);
   getRequest('./tokens.json', function(data, err){
+    if (err) console.log(err);
     var keys = JSON.parse(data);
-    console.log(keys);
-    var url = "https://www.googleapis.com/customsearch/v1?key=" + keys.apiKey + "&cx=" + keys.cx + "&q=" + query
+    console.log("keys", keys);
+    var url = "https://www.googleapis.com/customsearch/v1?key=" + keys.apiKey + "&cx=" + keys.cx + "&q=" + query + "&searchType=image"
+    console.log("url", url)
     
-    getRequest(url); 
+    getRequest(url, function (res, err) {
+      if (err) console.log(err);
+      console.log("res", res);
+    }); 
   });
 }
+
 
 // HELPER METHODS;
 

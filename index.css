@@ -28,9 +28,9 @@
 
 #search-icon > i {
   width: inherit;  
-  padding-left: 0.5em;
 }
 
 #search-icon, #search-box {
+  text-align: center;
   float: left
 }
