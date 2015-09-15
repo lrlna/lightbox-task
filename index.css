@@ -1,0 +1,36 @@
+#wrapper {
+  max-width: 100%;
+}
+
+#search-wrapper {
+  width: 50%;
+  margin: auto;
+  top: 50%;
+  bottom: 50%;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+
+#search-box {
+  width: 75%;
+  text-align: center;
+}
+
+#search-box > input {
+  width: 100%;
+  height: 4em;
+}
+
+#search-icon {
+  width: 25%;
+}
+
+#search-icon > i {
+  width: inherit;  
+  padding-left: 0.5em;
+}
+
+#search-icon, #search-box {
+  float: left
+}
