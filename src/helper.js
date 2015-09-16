@@ -1,7 +1,13 @@
 var helper = (function (help) {
   
   help.addListener = function(selector, handler, type) {
-    selector.addEventListener(type, handler, false);
+    if (type instanceof Array) {
+      [].forEach.call(type, function(a) {
+        selector.addEventListener(a, handler, false)
+      })
+    } else {
+      selector.addEventListener(type, handler, false);
+    }
   }
 
   // abstracted get request;

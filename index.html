@@ -20,7 +20,7 @@
     <div id="wrapper">
 
       <!-- give users the ability to search -->
-      <form class="center" role="form">
+      <form id="search-wrapper" class="centre" role="form">
         <div id="search-icon">
           <i class="fa fa-search fa-3x"></i> 
         </div>
@@ -29,18 +29,17 @@
 
 
       <!-- lightbox image -->
-      <div id="photo-wrapper" class="inactive center">
-        <div role="previous">
-          <i class="fa fa-chevron-left fa-3x"></i>
-        </div>
-        <div>
-          <img role="photo"/>
-        </div>
-        <div role="next">
-          <i class="fa fa-chevron-right fa-3x"></i>
+      <div class="controls previous lightbox-view inactive" role="previous">
+        <i class="fa fa-chevron-left fa-3x"></i>
+      </div>
+      <div class="centre lightbox-view inactive">
+        <div id="photo">
+          <img class="centre" role="photo"/>
         </div>
       </div>
-
+      <div class="controls next lightbox-view inactive" role="next">
+        <i class="fa fa-chevron-right fa-3x"></i>
+      </div>
     </div>
   </body>
 </html>

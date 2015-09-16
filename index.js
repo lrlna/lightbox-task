@@ -14,7 +14,7 @@ var previous;
 document.addEventListener("DOMContentLoaded", function() {
   // search event;
   search = document.querySelector("[role='form']");
-  next = document.querySelector("[role='next'");
+  next = document.querySelector("[role='next']");
   previous = document.querySelector("[role='previous']")
 
   helper.addListener(search, getPhotos, "submit");
@@ -40,12 +40,15 @@ function getPhotos(evt) {
 // get the lightbox magic going :tada:;
 var displayPhotos = function() {  
   photoDiv = document.querySelector("[role='photo']");
-  var photoWrapper = document.querySelector("#photo-wrapper")
+  var photoWrapper = document.querySelectorAll(".lightbox-view")
   var wrapper = document.querySelector("#wrapper");
 
+  // clear search query;
   query.value = "";
   search.classList.add("inactive");
-  photoWrapper.classList.remove("inactive");
+  [].forEach.call(photoWrapper, function(a) {
+    a.classList.remove("inactive");
+  })
   
   wrapper.classList.add("lightbox");
   photoDiv.setAttribute("src", photos[currentPhoto])
