@@ -29,6 +29,12 @@ html, body {
   position: absolute;
 }
 
+/* IMG CSS */
+img {
+  display: block;
+  margin: inherit;
+}
+
 /* SEARCH DIV CSS */
 
 #search-box {
