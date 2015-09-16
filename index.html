@@ -18,6 +18,7 @@
   </head>
   <body>
     <div id="wrapper">
+
       <!-- give users the ability to search -->
       <form class="center" role="form">
         <div id="search-icon">
@@ -25,9 +26,21 @@
         </div>
         <input id="search-box" type="search" placeholder="search flickr e.g. cat"></input>
       </form>
-      <div class="center">
-        <img class="inactive" role="photo">
+
+
+      <!-- lightbox image -->
+      <div id="photo-wrapper" class="inactive center">
+        <div role="previous">
+          <i class="fa fa-chevron-left fa-3x"></i>
+        </div>
+        <div>
+          <img role="photo"/>
+        </div>
+        <div role="next">
+          <i class="fa fa-chevron-right fa-3x"></i>
+        </div>
       </div>
+
     </div>
   </body>
 </html>

@@ -5,19 +5,28 @@
 var photos = [];
 var search;
 var query;
+var photoDiv;
 var currentPhoto = 0; 
+var next;
+var previous;
 
 // global event listener;
 document.addEventListener("DOMContentLoaded", function() {
   // search event;
   search = document.querySelector("[role='form']");
-  helper.addListener(search, getPhotos, "submit")
-})
+  next = document.querySelector("[role='next'");
+  previous = document.querySelector("[role='previous']")
 
+  helper.addListener(search, getPhotos, "submit");
+  helper.addListener(next, flickr.next, "click");
+  helper.addListener(previous, flickr.previous, 'click');
+})
 
 function getPhotos(evt) {
   evt.preventDefault();
   query = document.querySelector("[type='search']");
+  
+  // get keys;
   helper.getRequest('./tokens.json', function(data, err) {
     if (err) console.log(err);
     var keys = JSON.parse(data);
@@ -30,12 +39,15 @@ function getPhotos(evt) {
 
 // get the lightbox magic going :tada:;
 var displayPhotos = function() {  
-  var photoDiv = document.querySelector("[role='photo']");
+  photoDiv = document.querySelector("[role='photo']");
+  var photoWrapper = document.querySelector("#photo-wrapper")
+  var wrapper = document.querySelector("#wrapper");
 
   query.value = "";
   search.classList.add("inactive");
-  photoDiv.classList.remove("inactive");
+  photoWrapper.classList.remove("inactive");
   
+  wrapper.classList.add("lightbox");
   photoDiv.setAttribute("src", photos[currentPhoto])
 
 }

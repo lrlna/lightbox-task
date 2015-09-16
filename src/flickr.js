@@ -21,6 +21,19 @@ var flickr = (function (flckr) {
     }); 
   }
 
+  flckr.next = function() {
+    if (currentPhoto != photos.length-1) { 
+      currentPhoto = currentPhoto + 1;
+    }
+    photoDiv.setAttribute("src", photos[currentPhoto])  
+  }
+  flckr.previous = function() {
+    if (currentPhoto != 0) {
+      currentPhoto = currentPhoto - 1;
+    }
+    photoDiv.setAttribute("src", photos[currentPhoto]);
+  }
+
   return flckr;  
 
 }(flickr || {}));
