@@ -10,7 +10,7 @@ html, body {
 }
 
 /* GENERAL CLASSES */
-.inactive {
+.hide {
   display: none;
 }
 
@@ -40,18 +40,25 @@ img {
   width: 10%;
   float: left;
   text-align: center;
-  top: 50%;
-  bottom: 50%;
   position: absolute;
-  color: white;
+  color: #BDC3C7;
 }
 
 .previous {
-  left: 5%;
+  left: 3%;
+  top: 50%;
+  bottom: 50%;
 }
 
 .next {
-  right: 5%;  
+  right: 3%;  
+  top: 50;
+  bottom: 50%;
+}
+
+.close {
+  right: 3%;
+  top: 5%;
 }
 
 /* SEARCH DIV CSS */
