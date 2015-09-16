@@ -12,19 +12,19 @@
 
     <!-- include javascript srcs -->
     <script src="./index.js"></script>
+    <script src="./src/helper.js"></script>
+    <script src="./src/flickr.js"></script>
 
   </head>
   <body>
     <div id="wrapper">
       <!-- give users the ability to search -->
-      <div id="search-wrapper">
-        <div id="search-icon" role="submit" type="submit">
+      <form id="search-wrapper" role="form">
+        <div id="search-icon">
           <i class="fa fa-search fa-3x"></i> 
         </div>
-        <div id="search-box">
-          <input type="search" placeholder="search tags in instagram e.g. cat"></input>
-        </div>
-      </div>
+        <input id="search-box" type="search" placeholder="search tags in flickr e.g. wombat"></input>
+      </form>
     </div>
   </body>
 </html>

@@ -2,6 +2,12 @@
   max-width: 100%;
 }
 
+/* GENERAL CLASSES */
+.hide {
+  display: none;
+}
+
+/* SEARCH DIV CSS */
 #search-wrapper {
   width: 50%;
   margin: auto;
