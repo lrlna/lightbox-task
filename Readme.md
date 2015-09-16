@@ -3,7 +3,11 @@
 To Run locally:
 
 1. Clone this project
-2. Add your flickr keys](https://www.flickr.com/services/api/auth.howto.web.html) to `tokens.json`
+2. Add your [flickr keys](https://www.flickr.com/services/api/auth.howto.web.html) to `tokens.json`
+```
+touch tokens.json
+vim tokens.json
+```
 ```
 {
   "apiKey": "YOUR_KEY",
