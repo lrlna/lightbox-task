@@ -1,9 +1,16 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 #wrapper {
-  max-width: 100%;
+  min-height: 100%;
+  position: relative;
 }
 
 /* GENERAL CLASSES */
-.hide {
+.inactive {
   display: none;
 }
 
@@ -12,20 +19,19 @@
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* SEARCH DIV CSS */
-#search-wrapper {
+.center {
   width: 50%;
   margin: auto;
-  top: 50%;
   bottom: 50%;
+  top: 50%;
   left: 0;
   right: 0;
   position: absolute;
 }
 
+/* SEARCH DIV CSS */
+
 #search-box {
-  width: 75%;
-  padding-left: 1em;
   height: 1.5em;
   font-size: 2em;
   font-weight: 100;
@@ -37,8 +43,11 @@ input:focus {
   outline: 0;
 }
 
+#search-box::-webkit-search-cancel-button {
+  background-color: black;
+}
+
 #search-icon {
-  text-align: center;
   width: 25%;
 }
 
@@ -47,5 +56,6 @@ input:focus {
 }
 
 #search-icon, #search-box {
+  text-align: center;
   float: left
 }

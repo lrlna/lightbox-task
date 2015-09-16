@@ -10,16 +10,17 @@ var flickr = (function (flckr) {
     return photos; 
   }
 
-  flckr.searchPhotos = function(query, keys) {
+  flckr.searchPhotos = function(query, keys, done) {
     var url = "https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&api_key=" +keys.apiKey + "&is_gallery=true&text=" + query.value + "&nojsoncallback=?";
     helper.getRequest(url, function (res, err) {
       if (err) console.log(err);
       var jsonFlickr = JSON.parse(res);
       // use the array of photos from res to get img url;
       photos = flickr.constructImgUrl(jsonFlickr.photos.photo);
+      done(photos)
     }); 
   }
-  
+
   return flckr;  
 
 }(flickr || {}));
