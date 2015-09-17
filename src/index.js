@@ -8,6 +8,9 @@ var selectors = {};
 
 // global event listener;
 document.addEventListener("DOMContentLoaded", function() {
+  // run tests in browser; only available to master branch; 
+  test.runTests();
+
   // add to selectors object;
   selectors.search = document.querySelector("[role='form']");
   selectors.next =  document.querySelector("[role='next']");

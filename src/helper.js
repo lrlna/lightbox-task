@@ -1,3 +1,4 @@
+// this bb is a helper module with abstracted: get req, err handling, and listeners;
 var helper = (function (helper) {
   
   // add listeners to your fave selector;
@@ -43,3 +44,4 @@ var helper = (function (helper) {
   return helper;
 
 }(helper || {}));
+

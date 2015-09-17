@@ -5,8 +5,9 @@
 
 To Run locally:
 
-1. Clone this project
-2. Add your [flickr keys](https://www.flickr.com/services/api/auth.howto.web.html) to `tokens.json`
+Clone this project
+
+Add your [flickr keys](https://www.flickr.com/services/api/auth.howto.web.html) to `tokens.json`
 ```
 touch tokens.json
 vim tokens.json
@@ -19,9 +20,13 @@ vim tokens.json
 }
 ```
 
-3. Start a serve, e.g. python simple server:
+Start a serve, e.g. python simple server:
 ```
 python -m SimpleHTTPServer
+```
+And then test it <3 from the project root directory:
+```
+node test/test.js
 ```
 
 ##### Thoughts on various photo APIs:
