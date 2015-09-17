@@ -24,6 +24,9 @@ vim tokens.json
 python -m SimpleHTTPServer
 ```
 
+##### Possible improvements for the future:
+1. Make helpers (`helper.js` + `flickr.js`) as constructable objects (probably use a more conventional common js pattern?) rather than the simple modules using a module [pattern](http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html). That will allow for _much_ easier testing. 
+
 ##### Thoughts on various photo APIs:
 
 - _Instagram_ : oAuth 2 is awesome, but going through authentication trouble when you just wanna dig into the actual code I did not find was worth it.  
