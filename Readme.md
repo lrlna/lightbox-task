@@ -1,4 +1,4 @@
-### A lightbox task using vanilla js and flickr api :sparkles: :tada:
+### A lightbox task using [vanilla js](http://vanilla-js.com/)™® and flickr api :sparkles: :tada:
 
 [View](http://lrlna.github.io/lightbox-task/) a live version. 
 
