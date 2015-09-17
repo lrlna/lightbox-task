@@ -24,10 +24,7 @@ Start a serve, e.g. python simple server:
 ```
 python -m SimpleHTTPServer
 ```
-And then test it <3 from the project root directory:
-```
-node test/test.js
-```
+Tests <3 will run from the broswer. `./test/test.js` is using `console.assert` to only print if test does not "pass". In future :star:, should write an assert method that would take condition and message argument to check for whether a condition is correct and then print to the console.
 
 ##### Thoughts on various photo APIs:
 
