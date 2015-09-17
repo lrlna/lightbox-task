@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
   selectors.next =  document.querySelector("[role='next']"),
   selectors.previous =  document.querySelector("[role='previous']"),
   selectors.close =  document.querySelector("[role='close']"),
-  selectors.query = document.querySelector("[type='search']"),
+  selectors.query = document.querySelector("[type='text']"),
   selectors.photoDiv = document.querySelector("[role='photo']"),
   selectors.lightboxView = document.querySelectorAll(".lightbox-view"),
   selectors.wrapper = document.querySelector("#wrapper")

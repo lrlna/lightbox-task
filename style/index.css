@@ -29,11 +29,12 @@ html, body {
 img {
   display: block;
   margin: inherit;
+  border: 1px solid #439C78;
 }
 
 .lightbox {
   /* rgba --> colour + opacity as last arg */
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(67, 156, 120, 0.8);
 }
 
 .controls {
@@ -41,7 +42,7 @@ img {
   float: left;
   text-align: center;
   position: absolute;
-  color: #BDC3C7;
+  color: #AEEEE5;
 }
 
 .previous {
@@ -69,22 +70,29 @@ img {
 
 #search-box {
   height: 1.5em;
+  width: 50%;
   font-size: 2em;
-  font-weight: 100;
   border: 0;
-  border-bottom: 0.1em solid black;
+  border-bottom: 0.1em solid #DB1B5A;
+}
+
+input {
+  color: #439C78;
+  font-family: 'Poiret One';
 }
 
 input:focus {
   outline: 0;
 }
 
-#search-box::-webkit-search-cancel-button {
-  background-color: black;
+::-webkit-input-placeholder {
+  color: #D6EDE9;
+  font-family: 'Poiret One';
 }
 
 #search-icon {
   width: 25%;
+  color: #DB1B5A;
 }
 
 #search-icon > i {
