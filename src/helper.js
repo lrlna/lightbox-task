@@ -1,6 +1,6 @@
-var helper = (function (help) {
+var helper = (function (helper) {
   
-  help.addListener = function(selector, handler, type) {
+  helper.addListener = function(selector, handler, type) {
     if (type instanceof Array) {
       [].forEach.call(type, function(a) {
         selector.addEventListener(a, handler, false)
@@ -11,7 +11,7 @@ var helper = (function (help) {
   }
 
   // abstracted get request;
-  help.getRequest = function(path, callback) {
+  helper.getRequest = function(path, callback) {
     var httpRequest = new XMLHttpRequest();
     httpRequest.onreadystatechange = function() {
       if (httpRequest.readyState === XMLHttpRequest.DONE) {
@@ -28,6 +28,6 @@ var helper = (function (help) {
     httpRequest.send();
   }
   
-  return help;
+  return helper;
 
 }(helper || {}));
