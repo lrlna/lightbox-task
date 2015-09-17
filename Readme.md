@@ -1,4 +1,4 @@
-### A lightbox task using vanilla js and flickr api :sparkles: :tada:
+### A lightbox task using [vanilla js](http://vanilla-js.com/)™® and flickr api :sparkles: :tada:
 
 [View](http://lrlna.github.io/lightbox-task/) a live version. 
 
@@ -25,6 +25,9 @@ Start a serve, e.g. python simple server:
 python -m SimpleHTTPServer
 ```
 Tests <3 will run from the broswer. `./test/test.js` is using `console.assert` to only print if test does not "pass". In future :star:, should write an assert method that would take condition and message argument to check for whether a condition is correct and then print to the console.
+
+##### Possible improvements for the future:
+1. Make helpers (`helper.js` + `flickr.js`) as constructable objects (probably use a more conventional common js pattern?) rather than the simple modules using a module [pattern](http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html). That will allow for _much_ easier testing. 
 
 ##### Thoughts on various photo APIs:
 
