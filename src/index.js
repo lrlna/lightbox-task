@@ -9,14 +9,15 @@ var selectors = {};
 // global event listener;
 document.addEventListener("DOMContentLoaded", function() {
   // add to selectors object;
-  selectors.search = document.querySelector("[role='form']"),
-  selectors.next =  document.querySelector("[role='next']"),
-  selectors.previous =  document.querySelector("[role='previous']"),
-  selectors.close =  document.querySelector("[role='close']"),
-  selectors.query = document.querySelector("[type='text']"),
-  selectors.photoDiv = document.querySelector("[role='photo']"),
-  selectors.lightboxView = document.querySelectorAll(".lightbox-view"),
-  selectors.wrapper = document.querySelector("#wrapper")
+  selectors.search = document.querySelector("[role='form']");
+  selectors.next =  document.querySelector("[role='next']");
+  selectors.previous =  document.querySelector("[role='previous']");
+  selectors.close =  document.querySelector("[role='close']");
+  selectors.query = document.querySelector("[type='text']");
+  selectors.photoDiv = document.querySelector("[role='photo']");
+  selectors.lightboxView = document.querySelectorAll(".lightbox-view");
+  selectors.wrapper = document.querySelector("#wrapper");
+  selectors.error = document.querySelector("[role='error']");
 
   // add the curser to input at the start for better accessibility;
   selectors.query.select();
@@ -31,7 +32,7 @@ function getPhotos(evt) {
   if (evt) evt.preventDefault();
   // get keys;
   helper.getRequest('./tokens.json', function(data, err) {
-    if (err) console.log(err);
+    if (err) helper.displayError(err);
     var keys = JSON.parse(data);
     // send a req to flickr api;
     flickr.searchPhotos(selectors.query, keys, function(photos) {

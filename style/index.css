@@ -21,6 +21,20 @@ html, body {
   position: absolute;
 }
 
+#error {
+  background: #DB1B5A;
+  color: white;
+  padding: 0.1em;
+  border-radius: 0.2em;
+  text-align: center;
+  top: 5%;
+  left: 0;
+  right: 0;
+  position: absolute;
+  width: 70%;
+  margin: auto;
+}
+
 /* LIGHTBOX CSS */
 #photo {
   position: relative;

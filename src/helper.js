@@ -1,5 +1,6 @@
 var helper = (function (helper) {
   
+  // add listeners to your fave selector;
   helper.addListener = function(selector, handler, type) {
     if (type instanceof Array) {
       [].forEach.call(type, function(a) {
@@ -8,6 +9,17 @@ var helper = (function (helper) {
     } else {
       selector.addEventListener(type, handler, false);
     }
+  }
+
+  // handle thy errors;
+  helper.displayError = function(err) {
+    selectors.error.innerText = err;
+    selectors.error.classList.remove("hide");
+    // clear message afterwards
+    setTimeout(function() {
+      selectors.error.innerText = "";
+      selectors.error.classList.add("hide");
+    }, 5000);
   }
 
   // abstracted get request;
